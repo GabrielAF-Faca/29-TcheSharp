@@ -47,14 +47,22 @@ Desenvolver um sistema web inteligente que a partir de uma imagem e uma localiza
 <br/>
 
 ## Tecnologias Utilizadas
-__Back-End__:  Google Maps API, Gemini API
+__Back-End__:  Google Maps API, Gemini API  
 __Front-End__:  
 __Banco de Dados__:  
 
 <br/>
 
 ## Instalação e Execução
-
-primeiro tem que navegar para a pasta api e instalar o requirements.txt com o comando "pip install requirements.txt" depois rode o seguinte comando no terminal "python -m uvicorn main:app --reload"
-
-
+1. Clone o repositório
+```bash
+git clone 'https://github.com/GabrielAF-Faca/29-TcheSharp.git'
+```
+2. Navegue para a pasta api e instale os requerimentos
+```bash
+pip install requirements.txt
+```
+3. Digite o seguinte comando no terminal
+```bash
+python -m uvicorn main:app --reload
+```
