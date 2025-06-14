@@ -32,6 +32,20 @@ Desenvolver um sistema web inteligente que a partir de uma imagem e uma localiza
 
 <br/>
 
+<table>
+  <tr>
+    <td>
+      <h1>Loci</h1>
+      <p>Loci é um sistema inteligente que transforma imagens e localização geográfica em descrições ricas, históricas e culturais, permitindo que qualquer pessoa compreenda o que está vendo, onde está, e por que aquele lugar é importante. Através da combinação de Visão Computacional, Geolocalização e IA Generativa, o Loci identifica o conteúdo de uma imagem (como monumentos, construções ou esculturas) e, com base na localização do usuário, gera um texto contextual personalizado, abordando: Descrição detalhada; Contexto histórico e cultural; e Curiosidades relevantes.</p>
+    </td>
+    <td>
+      <img src="https://github.com/user-attachments/assets/3c331178-678a-4232-a883-b7c2f8b7e3c2" width="600">
+    </td>
+  </tr>
+</table>
+
+<br/>
+
 ## Tecnologias Utilizadas
 __Back-End__:  Google Maps API, Gemini API
 __Front-End__:  
