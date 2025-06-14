@@ -1,4 +1,4 @@
-# 29 - Tchê# (sharp)
+# Loci - Além do Olhar
 
 ## Integrantes
 - Alisson de Almeida Lamarque (__Security Developer__)
