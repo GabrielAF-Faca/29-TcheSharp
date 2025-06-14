@@ -54,3 +54,7 @@ __Banco de Dados__:
 <br/>
 
 ## Instalação e Execução
+
+primeiro tem que navegar para a pasta api e instalar o requirements.txt com o comando "pip install requirements.txt" depois rode o seguinte comando no terminal "python -m uvicorn main:app --reload"
+
+
