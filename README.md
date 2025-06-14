@@ -33,7 +33,7 @@ Desenvolver um sistema web inteligente que a partir de uma imagem e uma localiza
 <br/>
 
 ## Tecnologias Utilizadas
-__Back-End__:  
+__Back-End__:  Google Maps API, Gemini API
 __Front-End__:  
 __Banco de Dados__:  
 
