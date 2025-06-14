@@ -38,5 +38,5 @@ __Front-End__:
 __Banco de Dados__:  
 
 <br/>
-Add commentMore actions
+
 ## Instalação e Execução
