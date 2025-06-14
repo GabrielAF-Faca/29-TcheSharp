@@ -1,4 +1,4 @@
-from fastapi import APIRouter, UploadFile
+from fastapi import APIRouter, File, UploadFile, Form
 from pydantic import BaseModel
 from dotenv import load_dotenv
 from google import genai
@@ -6,6 +6,7 @@ from google.genai import types
 from .maps import *
 import os
 from io import BytesIO
+from typing import Annotated
 
 router = APIRouter()
 client = genai.Client(api_key=os.getenv("GEMINI_KEY"))
@@ -16,7 +17,6 @@ class Data(BaseModel):
     linguagem: str
     coords: list
 
-foto = client.files.upload(file="foto.jpg")
 
 def get_gemini_response(imagem, mapa_info, linguagem="en"):
     response = client.models.generate_content(
@@ -39,20 +39,20 @@ def get_gemini_response(imagem, mapa_info, linguagem="en"):
     return response.text
 
 @router.post("/sistema")
-async def post_pagina(data: Data):
-    image_bytes = await data.img.read()
-    file_obj_for_gemini = BytesIO(image_bytes)
-    file_obj_for_gemini.name = data.img.filename  # O nome do arquivo é importante para o Gemini API
+async def post_pagina(img: Annotated[UploadFile, File()],
+    linguagem: Annotated[str, Form()],
+    coords: Annotated[str, Form()]):
 
-    # Faz o upload do arquivo para a Google Gemini File API (sem salvar no disco do seu servidor)
-    # Este é um upload para os servidores do Google para que o modelo possa acessá-lo.
-    imagem = client.files.upload(file_obj_for_gemini)
-
-    linguagem = data.linguagem
-    coords = data.coords
-    mapa_info = get_address_and_places_info_google(coords[0], coords[1])
-
-    gemini_response = get_gemini_response(imagem, mapa_info, linguagem)
+    image_bytes = await img.read()
+    imagem_gemini_file = types.Part.from_bytes(
+        data=image_bytes,
+        mime_type='image/jpeg',
+      )
+    linguagem = linguagem
+    coords = coords.replace("[","").replace("]", "").split(",")
+    mapa_info = get_address_and_places_info_google(float(coords[0]), float(coords[1]))
+    print(mapa_info)
+    gemini_response = get_gemini_response(imagem_gemini_file, mapa_info, linguagem)
 
     dados = {}
 
