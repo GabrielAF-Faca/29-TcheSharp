@@ -1,3 +1,5 @@
+import WelcomeScreen from "./components/screens/welcome-screen";
+
 export default function Home() {
-  return <div>Teste</div>;
+  return <WelcomeScreen />;
 }
