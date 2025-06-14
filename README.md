@@ -1,9 +1,9 @@
 # Loci - Além do Olhar
 
 ## Integrantes
-- Alisson de Almeida Lamarque (__Security Developer__)
+- Alisson de Almeida Lamarque (__Software Engineer__)
 - Gabriel Azenha Fachim (__Back-End Developer__)
-- Gustavo Sefrin Gomes (__Tech Lead__)
+- Gustavo Sefrin Gomes (__Software Engineer__)
 - Matheus Machado Faccin (__Back-End Developer__)
 - Maurício Pereira Braga (__Front-End Developer__)
 
@@ -47,9 +47,15 @@ Desenvolver um sistema web inteligente que a partir de uma imagem e uma localiza
 <br/>
 
 ## Tecnologias Utilizadas
-__Back-End__:  Google Maps API, Gemini API  
-__Front-End__:  
-__Banco de Dados__:  
+- __Back-End__:  
+  - Python
+  - FastAPI
+  - Google Maps API
+  - Gemini API  
+- __Front-End__:
+  - JavaScript/TypeScript
+  - Next.js
+  - Tailwind
 
 <br/>
 
