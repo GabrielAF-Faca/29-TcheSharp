@@ -68,7 +68,12 @@ git clone 'https://github.com/GabrielAF-Faca/29-TcheSharp.git'
 ```bash
 pip install requirements.txt
 ```
-3. Digite o seguinte comando no terminal
+3. Troque o nome do arquivo .env.example para .env e preencha as chaves de API
+```bash
+MAPS_API_KEY=[KEY DA API DO GOOGLE MAPS]
+GEMINI_KEY=[KEY DA API DO GEMINI]
+```
+4. Digite o seguinte comando no terminal
 ```bash
 python -m uvicorn main:app --reload
 ```
